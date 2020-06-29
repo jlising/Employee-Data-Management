@@ -37,6 +37,6 @@ After creating the database, import the dumped data located in data/edm.sql
 # To run the frontend (angular js):
 1. Node Package Manager and Angular CLI must be installed.
 2. Execute command "npm install" (first time only)
-3. npm start
+3. Execute command "npm start"
 4. Visit http://localhost:4200
 

@@ -8,6 +8,6 @@ export const environment = {
   apiEndpointUrl: 'http://localhost:4200/api',
   pagingOptions : { start : 1, size  :10, sortOrder : "asc", sort : "id"},
   appTitle : "Employee Data Management Tool",
-  appVersion : '1.1.0',
-  copyrightYear : '2019'
+  appVersion : '1.2.0',
+  copyrightYear : '2020'
 };
