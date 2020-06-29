@@ -20,12 +20,12 @@
     <description>A management tool to monitor employee data</description>
 	
 	<scm>
-		<connection>scm:git:git@github.com:jlising/dev-ops-case-study.git</connection>
+		<connection>scm:git:git@github.com:jlising/Employee-Data-Management.git</connection>
 		<url>https://github.com/jlising/dev-ops-case-study</url>
-		<developerConnection>scm:git:git@github.com:jlising/dev-ops-case-study.git</developerConnection>
+		<developerConnection>scm:git:git@github.com:jlising/Employee-Data-Management.git</developerConnection>
 	</scm>
 
-    <!-- Repositories -->
+    <!-- Repositories
     <repositories>
         <repository>
             <id>ibm-release</id>
@@ -33,6 +33,7 @@
             <url>http://nexus:8081/repository/ibm-releases/</url>
         </repository>
     </repositories>
+    -->
 
     <!-- Common POM reference -->
     <properties>
@@ -682,12 +683,14 @@
 			
         </pluginManagement>
     </build>
-	
+
+    <!--
 	<distributionManagement>
 	    <repository>
 	        <id>nexus-release-repository</id>
 	        <name>release-repository</name>
 	        <url>${REPOSITORY_URL}</url>
 	    </repository>
-</distributionManagement>
+    </distributionManagement>
+    -->
 </project>

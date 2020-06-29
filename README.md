@@ -12,11 +12,17 @@ User: edm
 Password: n/a
 
 After creating the database, import the dumped data located in data/edm.sql
+# Install first the parent
+1. Change directory to Employee-Data-Management.
+2. Execute command mvn clean install -U
+
+# Install w3java library.
+1. Execute command mvn install:install-file "-Dfile=<YOUR DIRECTORY>\Employee-Data-Management\data\w3java-1.2.0.jar" -DgroupId=com.ibm.extremeblue -DartifactId=w3java -Dversion=1.2.0 -Dpackaging=jar -DgeneratePom=true
 
 # To run the tasks module:
 1. Change directory to tasks.
 2. Execute command mvn clean install -Prun-tomcat -DskipTests
-3. Visit http://localhost:8808/tasks
+3. Visit http://localhost:8808/tasks (will not show any page, this module is running like a cron)
 
 # To run the webservices module:
 1. Change directory to webservices.
@@ -30,7 +36,7 @@ After creating the database, import the dumped data located in data/edm.sql
 
 # To run the frontend (angular js):
 1. Node Package Manager and Angular CLI must be installed.
-2. Execute command npm install (first time only)
+2. Execute command "npm install" (first time only)
 3. npm start
 4. Visit http://localhost:4200
 

@@ -35,4 +35,5 @@ div.employees-grid table tr td.action a.action-button{
     height: 18px !important;
     line-height: 4px !important;
     font-size: 8px !important;
+    margin: 0px 1px 0px 1px;
 }
