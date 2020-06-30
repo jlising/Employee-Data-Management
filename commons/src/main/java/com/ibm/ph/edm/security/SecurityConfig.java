@@ -57,6 +57,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/logout").permitAll()
                 .antMatchers("/").permitAll()
                 .antMatchers("/assets/**").permitAll()
+                .antMatchers("/watson-assistant/**").permitAll()
                 .antMatchers("/**").authenticated()
                 //.and().formLogin().loginProcessingUrl("/auth/login") //@TODO: Make this work!!!!
                 .and().logout().logoutSuccessHandler(restLogoutSuccessHandler)

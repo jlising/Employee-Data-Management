@@ -6,24 +6,31 @@ import { environment } from '../../../environments/environment';
 import {Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppGlobal } from '../../app.global';
+import { MatDialog, MatDialogRef } from '@angular/material';
+import { ToasterService } from 'angular2-toaster';
+import { ChatbotDialogComponent } from '../chatbot/chatbot-dialog.component';
 
 @Component({
 	selector : 'default-page',
 	templateUrl :'./default-page.component.html',
+	styleUrls: ['./default-page.component.css'],
 	encapsulation: ViewEncapsulation.None
 })
 export class DefaultPageComponent   implements OnInit {
 
    // Inject private classes via constructor
-   constructor( public _appGlobal : AppGlobal, private _router : Router ){}
+   constructor( public _appGlobal : AppGlobal,
+                private _router : Router,
+                private _toasterService : ToasterService,
+                public _dialog: MatDialog ){}
 
    //Apply definition since we implemented OnInit
    ngOnInit() {
-        if(this._appGlobal.userSession == null || this._appGlobal.userSession.user == undefined || this._appGlobal.userSession.user == null){
-             this._router.navigate(['/login']);
-        }else{
-            this._router.navigate(['/profile']);
-        }
+        //if(this._appGlobal.userSession == null || this._appGlobal.userSession.user == undefined || this._appGlobal.userSession.user == null){
+        //     this._router.navigate(['/home']);
+        //}else{
+        //    this._router.navigate(['/profile']);
+        //}
    }
 
    /**
@@ -32,4 +39,25 @@ export class DefaultPageComponent   implements OnInit {
    w3Login(){
         this._router.navigate(['/login']);
    }
+
+   public openChatBotDialog(): void {
+
+           // Open the dialog and pass the data
+           let dialogRef = this._dialog.open(ChatbotDialogComponent, {
+             height: '395px',
+             width: '650px',
+             maxHeight: '495px',
+             minHeight: '495px',
+             minWidth:'650px',
+             maxWidth: '650px',
+             data: { }
+           });
+
+           // After close, determine the selected employee
+           dialogRef.afterClosed().subscribe(result => {
+               if(result != undefined){
+                   //this.searchDialogEmployeeId = result;
+               }
+           });
+       }
 }

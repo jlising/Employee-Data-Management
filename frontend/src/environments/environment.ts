@@ -6,6 +6,7 @@
 export const environment = {
   production: false,
   apiEndpointUrl: 'http://localhost:4200/api',
+  watsonEndpointUrl: 'http://localhost:4200/watson',
   pagingOptions : { start : 1, size  :10, sortOrder : "asc", sort : "id"},
   appTitle : "Employee Data Management Tool",
   appVersion : '1.2.0',

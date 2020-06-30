@@ -1,6 +1,7 @@
 export const environment = {
   production: true,
   apiEndpointUrl: '/api',
+  watsonEndpointUrl: '/watson',
   pagingOptions : { start : 1, size  :10, sortOrder : "asc", sort : "id"},
   appTitle : "Employee Data Management Tool",
   appVersion : '1.2.0',

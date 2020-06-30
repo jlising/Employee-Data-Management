@@ -46,6 +46,11 @@ node_modules/
  .idea/modules
  *.iml
  *.ipr
+commons.iml
+tasks.iml
+frontend.iml
+webservices.iml
+watson-assistant.iml
 
 # CMake
 cmake-build-*/

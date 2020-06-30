@@ -28,6 +28,9 @@ import { MeetingEditComponent } from './components/meetings/meeting-edit.compone
 import { MeetingAddComponent } from './components/meetings/meeting-add.component';
 import { ActionItemsComponent } from './components/action-items/action-items.component';
 import { MeetingEmployeeSearchDialogComponent } from './components/meetings/meeting-employee-search-dialog.component';
+import { ActionItemDialogComponent } from './components/action-items/action-item-dialog.component';
+import { AssignActionItemDialogComponent } from './components/action-items/assign-action-item-dialog.component';
+import { ChatbotDialogComponent } from './components/chatbot/chatbot-dialog.component';
 
 // Templates
 import { HeaderComponent } from './components/common/header.component';
@@ -48,9 +51,7 @@ import { ActionItemsService } from './components/action-items/action-items.servi
 import { AuthService } from './components/auth/auth.service';
 import { AjaxLoaderService } from './components/ajax-loader/ajax-loader.service';
 import { AuthGuardService } from './components/auth/auth-guard.service';
-import { ActionItemDialogComponent } from './components/action-items/action-item-dialog.component';
-import { AssignActionItemDialogComponent } from './components/action-items/assign-action-item-dialog.component';
-
+import { ChatBotService } from './components/chatbot/chatbot.service';
 
 @NgModule({
   declarations: [
@@ -74,14 +75,16 @@ import { AssignActionItemDialogComponent } from './components/action-items/assig
    MeetingAddComponent,
    MeetingEmployeeSearchDialogComponent,
    ActionItemDialogComponent,
-   AssignActionItemDialogComponent
+   AssignActionItemDialogComponent,
+   ChatbotDialogComponent
   ],
   entryComponents: [ EmployeeSearchDialogComponent,
                      EmployeeProfileDialogComponent,
                      EmployeeW3DialogComponent,
                      MeetingEmployeeSearchDialogComponent,
                      ActionItemDialogComponent,
-                     AssignActionItemDialogComponent],
+                     AssignActionItemDialogComponent,
+                     ChatbotDialogComponent],
   imports: [
      BrowserModule, //Configure browser-based application to transition from a server-rendered app. If not imported, ngIf, routings won't work.
      BrowserAnimationsModule,
@@ -103,6 +106,7 @@ import { AssignActionItemDialogComponent } from './components/action-items/assig
                 EmployeeReimbursementService,
                 MeetingsService,
                 ActionItemsService,
+                ChatBotService,
                 AuthGuardService, AuthService, ToasterService, AjaxLoaderService,
              				{ provide: LocationStrategy, useClass: HashLocationStrategy},
                              {
